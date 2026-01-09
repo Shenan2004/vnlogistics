@@ -1,0 +1,419 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+/* Navbar */
+header {
+    background: #0b3c5d;
+    color: white;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.nav ul {
+    list-style: none;
+    display: flex;
+}
+
+.nav ul li {
+    margin-left: 20px;
+}
+
+.nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Hero */
+.hero {
+    background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)),
+                url(ship.webp);
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+}
+
+.hero h2 {
+    font-size: 40px;
+}
+
+.hero p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Services */
+.services {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.services h2 {
+    margin-bottom: 40px;
+    color: #0b3c5d;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.card {
+    position: relative;
+    height: 300px; /* was 220px */
+    color: white;
+    border-radius: 12px;
+    padding: 0; /* important */
+    display: flex;
+    align-items: flex-end;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.4s ease;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card-content {
+    position: relative;
+    z-index: 2;
+    padding: 25px;
+    transition: all 0.4s ease;
+}
+
+.card-content p {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    margin-top: 10px;
+    font-size: 15px;
+    line-height: 1.5;
+    transition: all 0.4s ease;
+}
+
+.card:hover .card-content p {
+    opacity: 1;
+    max-height: 200px;
+}
+
+
+/* Dark overlay */
+.card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+}
+
+.card h3,
+.card p {
+    position: relative;
+    z-index: 1;
+}
+
+/* Backgrounds */
+.sea {
+    background-image: url(sea.jpg);
+}
+
+.air {
+    background-image: url('https://images.unsplash.com/photo-1529070538774-1843cb3265df');
+}
+
+.land {
+    background-image: url('https://images.unsplash.com/photo-1601584115197-04ecc0da31d7');
+}
+
+.door {
+    background-image: url(door.webp);
+}
+
+.trading {
+    background-image: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0');
+}
+
+
+
+
+/* About */
+.about {
+    background: #f4f4f4;
+    padding: 60px 0;
+    text-align: center;
+}
+
+.about h2 {
+    color: #0b3c5d;
+    margin-bottom: 20px;
+}
+
+/* Footer */
+/* Footer */
+footer {
+    background: #0b3c5d;
+    color: white;
+    padding: 50px 0 20px;
+    font-size: 14px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 30px;
+    margin-bottom: 20px;
+}
+
+.footer-about h3,
+.footer-links h3,
+.footer-contact h3,
+.footer-social h3 {
+    margin-bottom: 15px;
+    color: #ffd700; /* highlight headings */
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 8px;
+}
+
+.footer-links ul li a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer-links ul li a:hover {
+    color: #ffd700;
+}
+
+.footer-contact p,
+.footer-social p {
+    margin-bottom: 8px;
+}
+
+.footer-social a {
+    color: white;
+    text-decoration: none;
+    margin: 0 5px;
+    transition: 0.3s;
+}
+
+.footer-social a:hover {
+    color: #ffd700;
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.2);
+    text-align: center;
+    padding-top: 15px;
+    font-size: 13px;
+    color: rgba(255,255,255,0.8);
+}
+
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 70vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+.hero-slideshow {
+    position: absolute;
+    inset: 0;
+}
+
+.slide {
+    position: absolute;
+    inset: 0;
+    background-size: cover;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+}
+
+/* Start with first slide visible */
+.slide.active {
+    opacity: 1;
+}
+
+/* Text on top of slides */
+.hero-text {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-text h2 {
+    font-size: 40px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* Info Cards */
+.info-cards {
+    padding: 60px 0;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+}
+
+.info-card {
+    background: #0b3c5d;
+    color: white;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+    transform: translateY(-5px);
+}
+
+.info-card h3 {
+    margin-bottom: 10px;
+}
+
+/* Quote Section */
+.quote {
+    background: #f4f4f4;
+    padding: 70px 0;
+    text-align: center;
+}
+
+.quote h2 {
+    color: #0b3c5d;
+    margin-bottom: 10px;
+}
+
+.quote-text {
+    margin-bottom: 35px;
+    color: #555;
+}
+
+/* Quote Form */
+.quote-form {
+    max-width: 600px;
+    margin: auto;
+    display: grid;
+    gap: 15px;
+}
+
+.quote-form input,
+.quote-form select,
+.quote-form textarea {
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+}
+
+.quote-form button {
+    padding: 14px;
+    background: #0b3c5d;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.quote-form button:hover {
+    background: #07527b;
+}
+
+/* Navbar Logo */
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+.logo-img {
+    width: 60px;       /* Desktop width */
+    height: 60px;      /* Desktop height */
+    margin-right: 12px;
+    background: none !important;
+    display: block;
+
+ /* spacing between logo and text */
+}
+
+.logo-text {
+    font-size: 28px;     /* Desktop text size */
+    font-weight: bold;
+}
+
+/* Hover effect (optional) */
+
+/* Responsive: Mobile */
+@media (max-width: 768px) {
+    .logo-img {
+        width: 40px;
+        height: 40px;
+        margin-right: 8px;
+    }
+    .logo-text {
+        font-size: 20px;
+    }
+}
+
+/* Responsive: Very small screens */
+@media (max-width: 480px) {
+    .logo-img {
+        width: 35px;
+        height: 35px;
+        margin-right: 6px;
+    }
+    .logo-text {
+        font-size: 18px;
+    }
+}
+
+

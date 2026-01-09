@@ -1,0 +1,397 @@
+<!doctype html>
+<html lang="en" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VN Logistics - Freight Forwarding</title>
+  <script src="/_sdk/element_sdk.js"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body {
+      box-sizing: border-box;
+    }
+    
+    .smooth-scroll {
+      scroll-behavior: smooth;
+    }
+    
+    .hero-pattern {
+      position: relative;
+      overflow: hidden;
+      background-color: #fef3e2;
+    }
+    
+    .hero-pattern::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: url(contain.jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      z-index: 0;
+    }
+    
+    .container-bg {
+      background: linear-gradient(to bottom, #fff5f0 0%, #ffffff 100%);
+      position: relative;
+    }
+    
+    .container-bg::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-image: 
+        url('data:image/svg+xml,<svg width="300" height="200" xmlns="http://www.w3.org/2000/svg"><g opacity="0.03"><rect x="30" y="50" width="80" height="100" fill="%23ff9671" rx="4"/><rect x="120" y="60" width="80" height="100" fill="%23ff9671" rx="4"/><rect x="210" y="45" width="80" height="100" fill="%23ff9671" rx="4"/></g></svg>');
+      background-repeat: repeat-x;
+      background-position: center;
+    }
+    
+    .services-bg {
+      background: linear-gradient(135deg, #fef3e2 0%, #ffffff 100%);
+    }
+    
+    .card-hover {
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border: 2px solid #ffe5d9;
+    }
+    
+    .card-hover:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 20px 25px -5px rgba(255, 150, 113, 0.2), 0 10px 10px -5px rgba(255, 150, 113, 0.1);
+      border-color: #ffccbc;
+    }
+    
+    .hero-btn:hover, .contact-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 12px rgba(255, 107, 74, 0.4);
+      background: linear-gradient(135deg, #ff6b4a 0%, #ff5a3a 100%);
+    }
+    
+    nav a:hover {
+      opacity: 0.8;
+      text-decoration: underline;
+    }
+  </style>
+  <style>@view-transition { navigation: auto; }</style>
+  <script src="/_sdk/data_sdk.js" type="text/javascript"></script>
+ </head>
+ <body class="h-full overflow-auto">
+  <div class="w-full h-full overflow-auto smooth-scroll" style="background: linear-gradient(to bottom, #fef3e2 0%, #ffffff 50%, #fef3e2 100%);"><!-- Navigation -->
+   <nav class="w-full" style="background: linear-gradient(135deg, #ff7954 0%, #ff6b4a 100%); box-shadow: 0 4px 6px white;">
+    <div style="max-width: 1200px; margin: 0 auto; padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center;">
+     <div style="display: flex; align-items: center; gap: 0.75rem;">
+      <svg width="40" height="40" viewbox="0 0 40 40" fill="none"><rect width="40" height="40" rx="8" fill="#ffffff" /> <path d="M10 20 L20 12 L30 20 L20 28 Z" fill="#ff9671" /> <circle cx="20" cy="20" r="3" fill="#ff6b4a" />
+      </svg><span id="company-name" style="font-size: 1.5rem; font-weight: 700; color: #ffffff; font-family: 'Segoe UI', sans-serif;">VN Logistics</span>
+     </div>
+     <div style="display: flex; gap: 2rem;"><a href="#about" style="color: #ffffff; text-decoration: none; font-weight: 500; font-family: 'Segoe UI', sans-serif; font-size: 1rem;">About</a> <a href="#services" style="color: #ffffff; text-decoration: none; font-weight: 500; font-family: 'Segoe UI', sans-serif; font-size: 1rem;">Services</a> <a href="#contact" style="color: #ffffff; text-decoration: none; font-weight: 500; font-family: 'Segoe UI', sans-serif; font-size: 1rem;">Contact</a>
+     </div>
+    </div>
+   </nav><!-- Hero Section -->
+   <section class="hero-pattern w-full" style="padding: 5rem 2rem; position: relative;">
+    <div style="max-width: 1200px; margin: 0 auto; text-align: center; position: relative; z-index: 1;">
+     <svg width="120" height="120" viewbox="0 0 120 120" style="margin: 0 auto 2rem;"><rect x="20" y="40" width="80" height="50" rx="4" fill="#ff9671" opacity="0.15" /> <rect x="15" y="35" width="90" height="55" rx="4" fill="none" stroke="#ff7954" stroke-width="2" /> <circle cx="60" cy="62" r="15" fill="#ff6b4a" /> <path d="M 60 50 L 60 74 M 48 62 L 72 62" stroke="#ffffff" stroke-width="3" stroke-linecap="round" /> <path d="M 30 25 Q 60 10 90 25" stroke="#ff7954" stroke-width="2" fill="none" stroke-dasharray="3,3" />
+     </svg>
+     <p id="tagline" style="color: #ff6b4a; font-size: 1rem; font-weight: 600; margin-bottom: 1rem; font-family: 'Segoe UI', sans-serif; letter-spacing: 0.05em;">YOUR GLOBAL SHIPPING PARTNER</p>
+     <h1 id="hero-title" style="font-size: 3rem; font-weight: 800; color: white; margin-bottom: 1.5rem; font-family: 'Segoe UI', sans-serif; line-height: 1.2;">Reliable Freight Forwarding Solutions</h1>
+     <p id="hero-subtitle" style="font-size: 1.25rem; color: white; max-width: 600px; margin: 0 auto 2rem; font-family: 'Segoe UI', sans-serif;">Connecting businesses worldwide with efficient, reliable, and cost-effective logistics services</p><a href="#contact" class="hero-btn" style="display: inline-block; background: linear-gradient(135deg, #ff7954 0%, #ff6b4a 100%); color: #ffffff; padding: 1rem 2.5rem; border-radius: 0.5rem; text-decoration: none; font-weight: 600; font-size: 1.125rem; font-family: 'Segoe UI', sans-serif; box-shadow: 0 4px 6px rgba(255, 255, 255, 0.3); transition: all 0.3s;">Get a Quote</a>
+    </div>
+   </section><!-- Stats Section -->
+   <section class="w-full" style="background: linear-gradient(135deg, #ff9671 0%, #ff7954 100%); padding: 3rem 2rem;">
+    <div style="max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; text-align: center;">
+     <div>
+      <div style="font-size: 3rem; font-weight: 800; color: #ffffff; font-family: 'Segoe UI', sans-serif;">
+       15+
+      </div>
+      <div style="color: #ffe5d9; font-size: 1rem; font-family: 'Segoe UI', sans-serif;">
+       Years Work Experience
+      </div>
+     </div>
+     <div>
+      <div style="font-size: 3rem; font-weight: 800; color: #ffffff; font-family: 'Segoe UI', sans-serif;">
+       50+
+      </div>
+      <div style="color: #ffe5d9; font-size: 1rem; font-family: 'Segoe UI', sans-serif;">
+       Countries Served
+      </div>
+     </div>
+     <div>
+      <div style="font-size: 3rem; font-weight: 800; color: #ffffff; font-family: 'Segoe UI', sans-serif;">
+       5K+
+      </div>
+      <div style="color: #ffe5d9; font-size: 1rem; font-family: 'Segoe UI', sans-serif;">
+       Happy Clients
+      </div>
+     </div>
+     <div>
+      <div style="font-size: 3rem; font-weight: 800; color: #ffffff; font-family: 'Segoe UI', sans-serif;">
+       99%
+      </div>
+      <div style="color: #ffe5d9; font-size: 1rem; font-family: 'Segoe UI', sans-serif;">
+       On-Time Delivery
+      </div>
+     </div>
+    </div>
+   </section><!-- About Section -->
+   <section id="about" class="w-full container-bg" style="padding: 5rem 2rem;">
+    <div style="max-width: 1200px; margin: 0 auto; position: relative;">
+     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; align-items: center;">
+      <div style="position: relative;">
+       <svg width="100%" height="350" viewbox="0 0 500 350"><!-- Large shipping containers --> <g opacity="0.9">
+         <rect x="50" y="100" width="140" height="180" fill="#ff9671" rx="8" />
+         <rect x="55" y="105" width="130" height="170" fill="#ff7954" rx="6" />
+         <line x1="70" y1="105" x2="70" y2="275" stroke="#ff6b4a" stroke-width="2" />
+         <line x1="120" y1="105" x2="120" y2="275" stroke="#ff6b4a" stroke-width="2" />
+         <line x1="170" y1="105" x2="170" y2="275" stroke="#ff6b4a" stroke-width="2" />
+         <rect x="65" y="120" width="35" height="45" fill="rgba(255,255,255,0.2)" rx="2" />
+         <rect x="110" y="120" width="35" height="45" fill="rgba(255,255,255,0.2)" rx="2" />
+         <rect x="155" y="120" width="20" height="45" fill="rgba(255,255,255,0.2)" rx="2" />
+         <text x="120" y="200" font-family="Arial" font-size="48" font-weight="bold" fill="#ffffff" text-anchor="middle">
+          VN
+         </text>
+        </g> <!-- Stacked container --> <g opacity="0.85">
+         <rect x="230" y="140" width="140" height="100" fill="#ffb399" rx="8" />
+         <rect x="235" y="145" width="130" height="90" fill="#ffa580" rx="6" />
+         <line x1="250" y1="145" x2="250" y2="235" stroke="#ff9671" stroke-width="2" />
+         <line x1="300" y1="145" x2="300" y2="235" stroke="#ff9671" stroke-width="2" />
+         <line x1="350" y1="145" x2="350" y2="235" stroke="#ff9671" stroke-width="2" />
+         <rect x="255" y="155" width="35" height="30" fill="rgba(255,255,255,0.3)" rx="2" />
+         <rect x="300" y="155" width="35" height="30" fill="rgba(255,255,255,0.3)" rx="2" />
+        </g> <g opacity="0.85">
+         <rect x="230" y="40" width="140" height="95" fill="#ffd1b3" rx="8" />
+         <rect x="235" y="45" width="130" height="85" fill="#ffbf99" rx="6" />
+         <line x1="250" y1="45" x2="250" y2="130" stroke="#ffb399" stroke-width="2" />
+         <line x1="300" y1="45" x2="300" y2="130" stroke="#ffb399" stroke-width="2" />
+         <line x1="350" y1="45" x2="350" y2="130" stroke="#ffb399" stroke-width="2" />
+        </g> <!-- Ground/dock --> <rect x="0" y="280" width="500" height="8" fill="#ff9671" opacity="0.2" /> <rect x="0" y="288" width="500" height="4" fill="#ff7954" opacity="0.15" />
+       </svg>
+      </div>
+      <div>
+       <h2 id="about-title" style="font-size: 2.5rem; font-weight: 800; color: #2c1810; margin-bottom: 1.5rem; font-family: 'Segoe UI', sans-serif;">About VN Logistics</h2>
+       <p id="about-text" style="color: #6b4423; font-size: 1.125rem; line-height: 1.8; margin-bottom: 1.5rem; font-family: 'Segoe UI', sans-serif;">With over 15 years of work experience in the freight forwarding industry, Established VN Logistics. VN Logistics has established itself as a trusted partner for businesses seeking reliable international shipping solutions. We specialize in air, ocean, and land transportation, offering comprehensive logistics services tailored to your needs.</p>
+       <p style="color: #6b4423; font-size: 1.125rem; line-height: 1.8; font-family: 'Segoe UI', sans-serif;">Our commitment to excellence, combined with our global network and advanced tracking technology, ensures your cargo arrives safely and on time, every time.</p>
+      </div>
+     </div>
+    </div>
+   </section><!-- Services Section -->
+   <section id="services" class="w-full services-bg" style="padding: 5rem 2rem;">
+    <div style="max-width: 1200px; margin: 0 auto;">
+     <h2 id="services-title" style="font-size: 2.5rem; font-weight: 800; color: #2c1810; text-align: center; margin-bottom: 3rem; font-family: 'Segoe UI', sans-serif;">Our Services</h2>
+     <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem;"><!-- Air Freight -->
+      <div class="card-hover" style="background: #ffffff; padding: 2.5rem; border-radius: 1rem; flex: 1; min-width: 300px; max-width: 350px;">
+       <svg width="80" height="80" viewbox="0 0 80 80" style="margin-bottom: 1.5rem;"><circle cx="40" cy="40" r="38" fill="#ff9671" opacity="0.1" /> <path d="M 25 40 L 40 30 L 55 40 L 40 35 Z" fill="#ff7954" /> <path d="M 30 45 L 50 45" stroke="#ff7954" stroke-width="2" /> <circle cx="32" cy="48" r="3" fill="#ff6b4a" /> <circle cx="48" cy="48" r="3" fill="#ff6b4a" />
+       </svg>
+       <h3 id="service-1-title" style="font-size: 1.5rem; font-weight: 700; color: #2c1810; margin-bottom: 1rem; font-family: 'Segoe UI', sans-serif;">Air Freight</h3>
+       <p style="color: #6b4423; line-height: 1.7; font-family: 'Segoe UI', sans-serif; font-size: 1rem;">Fast and reliable air cargo services for time-sensitive shipments. Global coverage with competitive rates and real-time tracking.</p>
+      </div><!-- Ocean Freight -->
+      <div class="card-hover" style="background: #ffffff; padding: 2.5rem; border-radius: 1rem; flex: 1; min-width: 300px; max-width: 350px;">
+       <svg width="80" height="80" viewbox="0 0 80 80" style="margin-bottom: 1.5rem;"><circle cx="40" cy="40" r="38" fill="#ff9671" opacity="0.1" /> <rect x="25" y="35" width="30" height="20" fill="#ff7954" rx="2" /> <rect x="28" y="30" width="8" height="5" fill="#ff6b4a" /> <rect x="38" y="30" width="8" height="5" fill="#ff6b4a" /> <rect x="48" y="30" width="8" height="5" fill="#ff6b4a" /> <path d="M 20 55 Q 40 50 60 55" stroke="#ff7954" stroke-width="2" fill="none" />
+       </svg>
+       <h3 id="service-2-title" style="font-size: 1.5rem; font-weight: 700; color: #2c1810; margin-bottom: 1rem; font-family: 'Segoe UI', sans-serif;">Ocean Freight</h3>
+       <p style="color: #6b4423; line-height: 1.7; font-family: 'Segoe UI', sans-serif; font-size: 1rem;">Cost-effective sea freight solutions for large-volume shipments. Full container load (FCL) and less than container load (LCL) options available.</p>
+      </div><!-- Land Transport - Centered below -->
+      <div class="card-hover" style="background: #ffffff; padding: 2.5rem; border-radius: 1rem; flex: 1; min-width: 300px; max-width: 350px;">
+       <svg width="80" height="80" viewbox="0 0 80 80" style="margin-bottom: 1.5rem;"><circle cx="40" cy="40" r="38" fill="#ff9671" opacity="0.1" /> <rect x="25" y="32" width="30" height="16" fill="#ff7954" rx="2" /> <rect x="28" y="28" width="10" height="4" fill="#ff6b4a" /> <circle cx="32" cy="50" r="4" fill="#2c1810" /> <circle cx="48" cy="50" r="4" fill="#2c1810" /> <path d="M 20 48 L 60 48" stroke="#ff7954" stroke-width="1" stroke-dasharray="2,2" />
+       </svg>
+       <h3 id="service-3-title" style="font-size: 1.5rem; font-weight: 700; color: #2c1810; margin-bottom: 1rem; font-family: 'Segoe UI', sans-serif;">Land Transport</h3>
+       <p style="color: #6b4423; line-height: 1.7; font-family: 'Segoe UI', sans-serif; font-size: 1rem;">Efficient ground transportation and last-mile delivery services. Door-to-door solutions for seamless logistics operations.</p>
+      </div>
+      <div class="card-hover" style="background: #ffffff; padding: 2.5rem; border-radius: 1rem; flex: 1; min-width: 300px; max-width: 350px;">
+  <svg width="80" height="80" viewBox="0 0 80 80" style="margin-bottom: 1.5rem;">
+    <circle cx="40" cy="40" r="38" fill="#ff9671" opacity="0.1"/>
+    <rect x="22" y="30" width="36" height="20" rx="3" fill="#ff7954"/>
+    <path d="M20 55 L60 55" stroke="#ff6b4a" stroke-width="2"/>
+    <circle cx="30" cy="55" r="3" fill="#2c1810"/>
+    <circle cx="50" cy="55" r="3" fill="#2c1810"/>
+  </svg>
+
+  <h3 style="font-size: 1.5rem; font-weight: 700; color: #2c1810; margin-bottom: 1rem;">
+    Door to Door Service
+  </h3>
+
+  <p style="color: #6b4423; line-height: 1.7; font-size: 1rem;">
+    Complete end-to-end logistics solutions from pickup at origin to delivery at destination, ensuring a smooth and hassle-free shipping experience.
+  </p>
+</div>
+<div class="card-hover" style="background: #ffffff; padding: 2.5rem; border-radius: 1rem; flex: 1; min-width: 300px; max-width: 350px;">
+  <svg width="80" height="80" viewBox="0 0 80 80" style="margin-bottom: 1.5rem;">
+    <circle cx="40" cy="40" r="38" fill="#ff9671" opacity="0.1"/>
+    <path d="M25 45 L40 30 L55 45" fill="#ff7954"/>
+    <path d="M25 35 L40 50 L55 35" fill="#ff6b4a"/>
+  </svg>
+
+  <h3 style="font-size: 1.5rem; font-weight: 700; color: #2c1810; margin-bottom: 1rem;">
+    Trading
+  </h3>
+
+  <p style="color: #6b4423; line-height: 1.7; font-size: 1rem;">
+    Import and export trading services with reliable sourcing, documentation handling, and compliance support for international markets.
+  </p>
+</div>
+
+     </div>
+    </div>
+   </section><!-- Contact Section -->
+   <section id="contact" class="w-full" style="padding: 5rem 2rem; background: #ffffff;">
+    <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+     <h2 id="contact-title" style="font-size: 2.5rem; font-weight: 800; color: #2c1810; margin-bottom: 1rem; font-family: 'Segoe UI', sans-serif;">Get In Touch</h2>
+     <p id="contact-subtitle" style="color: #6b4423; font-size: 1.25rem; margin-bottom: 3rem; font-family: 'Segoe UI', sans-serif;">Ready to ship? Contact us today for a customized logistics solution</p>
+     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem; margin-bottom: 3rem;">
+      <div style="padding: 1.5rem; background: #fff5f0; border-radius: 0.75rem; border: 2px solid #ffe5d9;">
+       <div style="font-size: 2rem; margin-bottom: 0.5rem;">
+        📧
+       </div>
+       <div style="font-weight: 600; color: #2c1810; margin-bottom: 0.25rem; font-family: 'Segoe UI', sans-serif;">
+        Email
+       </div>
+       <div style="color: #6b4423; font-family: 'Segoe UI', sans-serif; font-size: 0.875rem;">
+        nihal@vnlogistics.lk <br> info@vnlogistics.com
+       </div>
+      </div>
+      <div style="padding: 1.5rem; background: #fff5f0; border-radius: 0.75rem; border: 2px solid #ffe5d9;">
+       <div style="font-size: 2rem; margin-bottom: 0.5rem;">
+        📞
+       </div>
+       <div style="font-weight: 600; color: #2c1810; margin-bottom: 0.25rem; font-family: 'Segoe UI', sans-serif;">
+        Phone
+       </div>
+       <div style="color: #6b4423; font-family: 'Segoe UI', sans-serif; font-size: 0.875rem;">
+        +94 (72) 741 2125 <br> +94 (11) 2643070 
+       </div>
+      </div>
+      <div style="padding: 1.5rem; background: #fff5f0; border-radius: 0.75rem; border: 2px solid #ffe5d9;">
+       <div style="font-size: 2rem; margin-bottom: 0.5rem;">
+        📍
+       </div>
+       <div style="font-weight: 600; color: #2c1810; margin-bottom: 0.25rem; font-family: 'Segoe UI', sans-serif;">
+        Location
+       </div>
+       <div style="color: #6b4423; font-family: 'Segoe UI', sans-serif; font-size: 0.875rem;">
+        33A, Holy Cross Avenue, Moratuwa, Colombo, Sri Lanka.
+       </div>
+      </div>
+     </div><button onclick="showContactMessage()" class="contact-btn" style="background: linear-gradient(135deg, #ff7954 0%, #ff6b4a 100%); color: #ffffff; padding: 1rem 2.5rem; border-radius: 0.5rem; border: none; font-weight: 600; font-size: 1.125rem; cursor: pointer; font-family: 'Segoe UI', sans-serif; box-shadow: 0 4px 6px rgba(255, 107, 74, 0.3); transition: all 0.3s;">Request a Quote</button>
+     <div id="contact-message" style="display: none; margin-top: 2rem; padding: 1.5rem; background: #dcfce7; border-radius: 0.5rem; color: #166534; font-family: 'Segoe UI', sans-serif;">
+      Thank you for your interest! Our team will contact you within 24 hours.
+     </div>
+    </div>
+   </section><!-- Footer -->
+   <footer class="w-full" style="background: linear-gradient(135deg, #2c1810 0%, #4a2818 100%); padding: 2rem; text-align: center;">
+    <p style="color: #ffe5d9; font-family: 'Segoe UI', sans-serif; font-size: 0.875rem;">© 2024 VN Logistics. All rights reserved.</p>
+   </footer>
+  </div>
+  <script>
+    const defaultConfig = {
+      company_name: "VN Logistics",
+      tagline: "YOUR GLOBAL SHIPPING PARTNER",
+      hero_title: "Reliable Freight Forwarding Solutions",
+      hero_subtitle: "Connecting businesses worldwide with efficient, reliable, and cost-effective logistics services",
+      about_title: "About VN Logistics",
+      about_text: "With over 15 years of experience in the freight forwarding industry, VN Logistics has established itself as a trusted partner for businesses seeking reliable international shipping solutions. We specialize in air, ocean, and land transportation, offering comprehensive logistics services tailored to your needs.",
+      services_title: "Our Services",
+      service_1_title: "Air Freight",
+      service_2_title: "Ocean Freight",
+      service_3_title: "Land Transport",
+      contact_title: "Get In Touch",
+      contact_subtitle: "Ready to ship? Contact us today for a customized logistics solution",
+      primary_color: "#ff7954",
+      accent_color: "#ff6b4a",
+      text_color: "#2c1810",
+      background_color: "#fef3e2",
+      surface_color: "#ffffff"
+    };
+
+    async function onConfigChange(config) {
+      document.getElementById('company-name').textContent = config.company_name || defaultConfig.company_name;
+      document.getElementById('tagline').textContent = config.tagline || defaultConfig.tagline;
+      document.getElementById('hero-title').textContent = config.hero_title || defaultConfig.hero_title;
+      document.getElementById('hero-subtitle').textContent = config.hero_subtitle || defaultConfig.hero_subtitle;
+      document.getElementById('about-title').textContent = config.about_title || defaultConfig.about_title;
+      document.getElementById('about-text').textContent = config.about_text || defaultConfig.about_text;
+      document.getElementById('services-title').textContent = config.services_title || defaultConfig.services_title;
+      document.getElementById('service-1-title').textContent = config.service_1_title || defaultConfig.service_1_title;
+      document.getElementById('service-2-title').textContent = config.service_2_title || defaultConfig.service_2_title;
+      document.getElementById('service-3-title').textContent = config.service_3_title || defaultConfig.service_3_title;
+      document.getElementById('contact-title').textContent = config.contact_title || defaultConfig.contact_title;
+      document.getElementById('contact-subtitle').textContent = config.contact_subtitle || defaultConfig.contact_subtitle;
+    }
+
+    function showContactMessage() {
+      const message = document.getElementById('contact-message');
+      message.style.display = 'block';
+      setTimeout(() => {
+        message.style.display = 'none';
+      }, 5000);
+    }
+
+    if (window.elementSdk) {
+      window.elementSdk.init({
+        defaultConfig,
+        onConfigChange,
+        mapToCapabilities: (config) => ({
+          recolorables: [
+            {
+              get: () => config.primary_color || defaultConfig.primary_color,
+              set: (value) => {
+                config.primary_color = value;
+                window.elementSdk.setConfig({ primary_color: value });
+              }
+            },
+            {
+              get: () => config.accent_color || defaultConfig.accent_color,
+              set: (value) => {
+                config.accent_color = value;
+                window.elementSdk.setConfig({ accent_color: value });
+              }
+            },
+            {
+              get: () => config.text_color || defaultConfig.text_color,
+              set: (value) => {
+                config.text_color = value;
+                window.elementSdk.setConfig({ text_color: value });
+              }
+            },
+            {
+              get: () => config.background_color || defaultConfig.background_color,
+              set: (value) => {
+                config.background_color = value;
+                window.elementSdk.setConfig({ background_color: value });
+              }
+            },
+            {
+              get: () => config.surface_color || defaultConfig.surface_color,
+              set: (value) => {
+                config.surface_color = value;
+                window.elementSdk.setConfig({ surface_color: value });
+              }
+            }
+          ],
+          borderables: [],
+          fontEditable: undefined,
+          fontSizeable: undefined
+        }),
+        mapToEditPanelValues: (config) => new Map([
+          ["company_name", config.company_name || defaultConfig.company_name],
+          ["tagline", config.tagline || defaultConfig.tagline],
+          ["hero_title", config.hero_title || defaultConfig.hero_title],
+          ["hero_subtitle", config.hero_subtitle || defaultConfig.hero_subtitle],
+          ["about_title", config.about_title || defaultConfig.about_title],
+          ["about_text", config.about_text || defaultConfig.about_text],
+          ["services_title", config.services_title || defaultConfig.services_title],
+          ["service_1_title", config.service_1_title || defaultConfig.service_1_title],
+          ["service_2_title", config.service_2_title || defaultConfig.service_2_title],
+          ["service_3_title", config.service_3_title || defaultConfig.service_3_title],
+          ["contact_title", config.contact_title || defaultConfig.contact_title],
+          ["contact_subtitle", config.contact_subtitle || defaultConfig.contact_subtitle]
+        ])
+      });
+    }
+  </script>
+ <script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'9b56e5bcd50792f9',t:'MTc2Njk4NjE0Mi4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>

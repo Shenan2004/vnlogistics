@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VN Logistics</title>
+    <link rel="icon" href="logo.png" type="image/png">
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
+</script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "9E9W31LdF7jXeQYs1",
+      });
+   })();
+</script>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header>
+  <div class="nav container">
+    <a href="#hero" class="logo-link">
+      <img src="logo.png" alt="VN Logistics" class="logo-img">
+      <span class="logo-text">VN Logistics</span>
+    </a>
+
+    <ul>
+      <li><a href="#hero">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#quote">Get a Quote</a></li>
+    </ul>
+  </div>
+</header>
+
+
+    <!-- Hero -->
+    <!-- Hero -->
+<section class="hero">
+    <div class="hero-slideshow">
+        <div class="slide" style="background-image: url(contain.jpg);"></div>
+        <div class="slide" style="background-image: url(airplane.webp);"></div>
+        <div class="slide" style="background-image: url(truck2.jpg);"></div>
+    </div>
+    <div class="hero-text">
+        <h2>Reliable Global Logistics Solutions <br>In Sri Lanka</h2>
+        <p>Sea Freight • Air Freight • Land Transport • Door to Door • Trading <br> 
+            An Inovative, Most Trusted freight fowarding company in Sri Lanka </p>
+    </div>
+</section>
+
+
+    <!-- Services -->
+    <section id="services" class="services container">
+        <h2>Our Services</h2>
+
+        <div class="service-grid">
+
+    <div class="card sea">
+        <div class="card-content">
+            <h3>Sea Freight</h3>
+            <p>
+                VN Logistics provides reliable and cost-effective sea freight
+                solutions, handling FCL and LCL shipments with global coverage
+                and timely delivery.
+            </p>
+        </div>
+    </div>
+
+    <div class="card air">
+        <div class="card-content">
+            <h3>Air Freight</h3>
+            <p>
+                Our air freight services ensure fast, secure, and efficient
+                cargo transportation for time-sensitive shipments worldwide.
+            </p>
+        </div>
+    </div>
+
+    <div class="card land">
+        <div class="card-content">
+            <h3>Land Transport</h3>
+            <p>
+                We offer dependable inland transportation using modern vehicles,
+                ensuring safe and on-time delivery across regions.
+            </p>
+        </div>
+    </div>
+
+    <div class="card door">
+        <div class="card-content">
+            <h3>Door to Door</h3>
+            <p>
+                Complete logistics solutions from pickup to final delivery,
+                managed by a single trusted logistics partner.
+            </p>
+        </div>
+    </div>
+
+    <div class="card trading">
+        <div class="card-content">
+            <h3>Trading</h3>
+            <p>
+                Professional trading services supporting import and export
+                operations with efficient documentation and coordination.
+            </p>
+        </div>
+    </div>
+
+</div>
+
+
+        </div>
+    </section>
+
+    <!-- About -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2>About VN Logistics</h2>
+            <p>
+                VN Logistics delivers dependable logistics and trading solutions
+                across sea, air, and land. We focus on efficiency, reliability,
+                and long-term partnerships with our clients that established in Sri Lanka. By Dimbukkuwalage Samantha Nihal Kumara
+                who have more than 26 years in work experience across all freight fowarding platforms, pluse 1000+ sucessfull fowards.
+                
+            </p>
+        </div>
+    </section>
+
+    <!-- Info Cards -->
+<section class="info-cards container">
+    <div class="info-grid">
+
+        <div class="info-card">
+            <h3>Email Us</h3>
+            <p>nihal@vnlogistics.lk <br> info@vnlogistics.lk</p>
+        </div>
+
+        <div class="info-card">
+            <h3>Call Us</h3>
+            <p>+94 (72) 741 2125 <br> +94 (11) 264 3070</p>
+        </div>
+
+        <div class="info-card">
+            <h3>Location</h3>
+            <p>33A, Holy Cross Avenue, Moratuwa, Colombo, Sri Lanka.</p>
+        </div>
+
+    </div>
+</section>
+
+    <!-- Quote Section -->
+<section id="quote" class="quote">
+    <div class="container">
+        <h2>Request a Quote</h2>
+        <p class="quote-text">
+            Tell us about your shipment and our team will provide a tailored logistics solution.
+        </p>
+
+        <form class="quote-form">
+    <input type="text" id="name" placeholder="Your Name" required>
+    <input type="email" id="email" placeholder="Your Email" required>
+
+    <select id="subject" required>
+        <option value="">Select Service</option>
+        <option>Sea Freight</option>
+        <option>Air Freight</option>
+        <option>Land Transport</option>
+        <option>Door to Door</option>
+        <option>Trading</option>
+    </select>
+
+    <textarea id="message" rows="4"
+        placeholder="Shipment details (origin, destination, cargo, timeline)"
+        required></textarea>
+
+    <button type="button" onclick="sendEmail()">Get a Quote</button>
+</form>
+
+    </div>
+</section>
+
+
+
+    <!-- Footer -->
+    <footer>
+    <div class="container footer-grid">
+        <!-- Company Info -->
+        <div class="footer-about">
+            <h3>VN Logistics</h3>
+            <p>
+                Reliable logistics solutions connecting Sri Lanka to the world.
+                Sea, Air, Land, Door-to-Door, and Trading services.
+            </p>
+        </div>
+
+        <!-- Quick Links -->
+        <div class="footer-links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#hero">Home</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#quote">Get a Quote</a></li>
+            </ul>
+        </div>
+
+        <!-- Contact Info -->
+        <div class="footer-contact">
+            <h3>Contact</h3>
+            <p>Email: info@vnlogistics.lk</p>
+            <p>Phone: +94 (11) 264 3070</p>
+            <p>Address: 33A, Holy Cross Avenue, Moratuwa, Colombo, Sri Lanka.</p>
+        </div>
+
+        <!-- Optional Social Media -->
+        <div class="footer-social">
+            <h3>Follow Us</h3>
+            <p>
+                <a href="#">LinkedIn</a> | 
+                <a href="#">Facebook</a> | 
+                <a href="#">Instagram</a>
+            </p>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2026 VN Logistics. All Rights Reserved.</p>
+    </div>
+</footer>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
